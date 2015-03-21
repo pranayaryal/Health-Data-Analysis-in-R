@@ -16,3 +16,6 @@ hosp[,1] %>% summary % barplot
 
 ## arranging disease conditions by which ones were most common
 hosp[,1] %>% summary %>% sort
+
+## Remove the dollar sign from the charges
+gsub('\\$', '', hosp$Average.Covered.Charges)
