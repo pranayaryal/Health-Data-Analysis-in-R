@@ -1,5 +1,5 @@
 ## import the health data file downloaded from data.gov
-libray(ddplyr)
+libray(dplyr)
 library(ggvis)
 hosp <-read.csv('healthsummary.csv')
 
