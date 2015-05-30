@@ -1,7 +1,7 @@
 ## import the health data file downloaded from data.gov
-libray(dplyr)
+library(dplyr)
 library(ggvis)
-hosp <-read.csv('healthsummary.csv')
+hosp <-read.csv('hospital.csv')
 
 
 ## viewing the dataframe in a responsive manner, the view adjusts to the screen size
@@ -15,7 +15,7 @@ tbl_df(hosp)
 hosp[,1] %>% summary % barplot
 
 ## arranging disease conditions by which ones were most common
-hosp[,1] %>% summary %>% sort
+hosp[,1] %>% summary %>% sort %>% View
 
 ## Remove the dollar sign from the charges
 gsub('\\$', '', hosp$Average.Covered.Charges)
